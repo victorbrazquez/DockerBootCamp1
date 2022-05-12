@@ -1,0 +1,19 @@
+-FROM httpd:latest (Sobre Dockerfile) -->
+-COPY index.html /usr/local/apache2/htdocs/ (Sobre Dockerfile) --> Sirve para copar ficheros desde el Host al container
+
+-docker run hello-world --> Crea e inicia container inicial Hello World
+-docker pull httpd:latest --> Para descargarnos las imagenes directamente desde Docker Hub, en este caso Apache Tomcat
+-docker build -t bootcamp:latest --> construye la imagen a traves del dockerfile configurado con el FROM
+-docker images --> ver todas las imaegenes que tenemos en local
+-docker run -dit -p 8080:80 bootcamp:latest --> docker run crea e inicia un contenedor a partir de una imagen generada y con la opcion -d para ejecutar el demonio, 
+ la opcion -it de forma interactiva -p para asignar el puerto del controlador. Mapea los puertos del contenedor con los del Host. Tambien se le puede añadir la 
+ etiqueta --name para asignarle un nombre.
+-docker rm 279 --> Borrar un contenedor. Con la opcion --force borramos los que estén en ejecución
+-docker rmi --> Eliminar una imagen.
+-docker stop 0d --> Para parar uno o varios contenedores. Con la opción -t para añadir tiempo de espera antes de la ejecución
+-docker attach + id_container --> Conectarnos a nuestro contenedor
+-docker run -it bootcamp bash --> Crear un contenedor de forma interactiva y accedemos a la consola del mismo
+-docker volume create myvol --> Crea volumen myvol
+-docker volumes --> Lista todos los volumenes
+-docker inspect --> para ver los volumenes, estado, imagenes y contenedores (o para un contenedor concreto)
+-docker ps -a --> Muestra todos los contenedores y su estado
