@@ -2,9 +2,10 @@
 -COPY index.html /usr/local/apache2/htdocs/ (Sobre Dockerfile) --> Sirve para copar ficheros desde el Host al container
 
 -docker run hello-world --> Crea e inicia container inicial Hello World
--docker pull httpd:latest --> Para descargarnos las imagenes directamente desde Docker Hub, en este caso Apache Tomcat
+-docker pull httpd:latest --> Para descargarnos las imagenes directamente desde Docker Hub, en este caso descargamos Apache Tomcat
 -docker build -t bootcamp:latest --> construye la imagen a traves del dockerfile configurado con el FROM
 -docker images --> ver todas las imaegenes que tenemos en local
+-docker start --> iniciar uno o varios contenedores
 -docker run -dit -p 8080:80 bootcamp:latest --> docker run crea e inicia un contenedor a partir de una imagen generada y con la opcion -d para ejecutar el demonio, 
  la opcion -it de forma interactiva -p para asignar el puerto del controlador. Mapea los puertos del contenedor con los del Host. Tambien se le puede añadir la 
  etiqueta --name para asignarle un nombre.
