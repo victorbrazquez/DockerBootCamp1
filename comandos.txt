@@ -1,4 +1,4 @@
--FROM httpd:latest (Sobre Dockerfile) -->
+-FROM httpd:latest (Sobre Dockerfile) -->Establecer la imagen base con la que vamos a trabajar
 -COPY index.html /usr/local/apache2/htdocs/ (Sobre Dockerfile) --> Sirve para copar ficheros desde el Host al container
 
 -docker run hello-world --> Crea e inicia container inicial Hello World
